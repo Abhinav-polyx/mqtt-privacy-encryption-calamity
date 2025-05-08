@@ -1,17 +1,30 @@
-# MQTT Privacy-Protected Messaging in Calamity Scenarios
+# MQTT Privacy Project
 
-This project implements a privacy-enhanced MQTT communication system to simulate secure messaging between victims and a command center during a disaster. It uses:
+## Tools Used
+- Python
+- Paho MQTT
+- Mosquitto Broker
+- `cryptography` library
 
-- 🛡️ **Fernet encryption** (AES-based) for payload protection
-- 🧠 **SHA-256 hashing** for pseudonymizing victim identities
-- ✅ A working publisher-subscriber loop using `paho-mqtt`
+## Setup Instructions
 
-## 🔧 Requirements
-
-- Python 3.7+
-- `paho-mqtt`
-- `cryptography`
-
+### Install Dependencies
 ```bash
+sudo apt install mosquitto mosquitto-clients
 pip install paho-mqtt cryptography
+```
 
+### Run MQTT Broker
+```bash
+mosquitto
+```
+
+### Run Publisher
+```bash
+python publisher.py
+```
+
+### Run Subscriber
+```bash
+python subscriber.py
+```
